@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kko-xc-Vqy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kko-xc-Vqy">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="_2Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Swifty_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0bv-6o-aNv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-se-hOv">
-                                <rect key="frame" x="87.5" y="100.5" width="200" height="261"/>
+                                <rect key="frame" x="87.5" y="119" width="200" height="224"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="42Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-nG-tKM">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
@@ -37,23 +37,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EXp-x5-lKA">
-                                        <rect key="frame" x="0.0" y="190" width="200" height="34"/>
-                                        <color key="backgroundColor" red="0.62771192580000001" green="0.63621827669999997" blue="0.67976203580000005" alpha="0.70456977740000004" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="2u3-Ej-Gjf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oet-Vu-Ux4">
-                                        <rect key="frame" x="0.0" y="227" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="190" width="200" height="34"/>
                                         <color key="backgroundColor" red="0.29130007870000002" green="0.6631594649" blue="0.67581602519999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="qMG-rJ-VHD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                        <state key="normal" title="Login">
+                                        <state key="normal" title="Search">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -91,7 +82,6 @@
                         <outlet property="backgroundImage" destination="ram-GB-f2M" id="7E2-md-GFf"/>
                         <outlet property="loginButton" destination="Oet-Vu-Ux4" id="pso-YB-bM9"/>
                         <outlet property="logoImage" destination="OdH-nG-tKM" id="7IH-9K-kRf"/>
-                        <outlet property="passwdTextField" destination="EXp-x5-lKA" id="u5p-WY-kxP"/>
                         <outlet property="stackView" destination="z0Q-se-hOv" id="xv5-GE-6sm"/>
                         <outlet property="usernameTextField" destination="Jvo-DQ-TD8" id="mjh-V3-leP"/>
                     </connections>
@@ -103,7 +93,7 @@
         <!--Logged In View Controller-->
         <scene sceneID="JfB-di-19u">
             <objects>
-                <viewController storyboardIdentifier="LoggedInViewController" id="374-JV-Weo" customClass="LoggedInViewController" customModule="_2Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoggedInViewController" id="374-JV-Weo" customClass="LoggedInViewController" customModule="Swifty_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aQi-Ya-qaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +109,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d6E-M7-PcB">
                                                 <rect key="frame" x="8" y="8" width="150" height="150"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="1Hq-l4-e5E"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="ELa-uh-Ztb"/>
@@ -187,7 +177,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="2wb-DD-o3p" customClass="CursusTableViewCell" customModule="_2Events" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="2wb-DD-o3p" customClass="CursusTableViewCell" customModule="Swifty_Companion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="359" height="41.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2wb-DD-o3p" id="Crq-Ox-gOz">
@@ -306,7 +296,7 @@
         <!--Event View Controller-->
         <scene sceneID="zmP-Up-l4e">
             <objects>
-                <viewController id="Lyu-gO-Nse" customClass="EventViewController" customModule="_2Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lyu-gO-Nse" customClass="EventViewController" customModule="Swifty_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GZQ-Mo-vAz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="730"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,7 +559,7 @@
         <!--Event Table View Controller-->
         <scene sceneID="ivv-1v-amw">
             <objects>
-                <tableViewController storyboardIdentifier="EventTableViewController" id="j81-iV-uaE" customClass="EventTableViewController" customModule="_2Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventTableViewController" id="j81-iV-uaE" customClass="EventTableViewController" customModule="Swifty_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H0H-b6-UEB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,11 +574,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EventCell" id="scn-Xq-bBN" customClass="EventCell" customModule="_2Events" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EventCell" id="scn-Xq-bBN" customClass="EventCell" customModule="Swifty_Companion" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="scn-Xq-bBN" id="Rew-h3-M0c">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="347.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="0.17686954140663147" green="0.19651037454605103" blue="0.31034475564956665" alpha="0.74839469178082196" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>

@@ -22,6 +22,7 @@
 		62B5140623533E8800FBFD18 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B5140523533E8800FBFD18 /* EventTableViewController.swift */; };
 		673C702C2352282F00608C2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673C70292352282E00608C2C /* LoginViewController.swift */; };
 		673C702D2352282F00608C2C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673C702A2352282E00608C2C /* Extensions.swift */; };
+		94A47F5823950D1300F55C96 /* ProjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A47F5723950D1300F55C96 /* ProjectData.swift */; };
 		EA609DAB2352492F002F3B36 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609DAA2352492F002F3B36 /* Services.swift */; };
 		EAB13ECB2354CBFC006B8F57 /* CampusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB13ECA2354CBFC006B8F57 /* CampusData.swift */; };
 		EAB13ECD2354D0BC006B8F57 /* CursusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB13ECC2354D0BC006B8F57 /* CursusData.swift */; };
@@ -45,6 +46,7 @@
 		62B5140523533E8800FBFD18 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		673C70292352282E00608C2C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		673C702A2352282E00608C2C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		94A47F5723950D1300F55C96 /* ProjectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectData.swift; sourceTree = "<group>"; };
 		EA609DAA2352492F002F3B36 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		EAB13ECA2354CBFC006B8F57 /* CampusData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusData.swift; sourceTree = "<group>"; };
 		EAB13ECC2354D0BC006B8F57 /* CursusData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursusData.swift; sourceTree = "<group>"; };
@@ -72,27 +74,60 @@
 		27C5E8622351D3D400E32B1A /* Swifty Companion */ = {
 			isa = PBXGroup;
 			children = (
-				2736DA35235350E700DD91AC /* CursusTableViewCell.swift */,
 				27C5E8632351D3D400E32B1A /* AppDelegate.swift */,
-				4044C1212352FB9800819EDE /* EventData.swift */,
-				EAB13ECA2354CBFC006B8F57 /* CampusData.swift */,
-				EAB13ECC2354D0BC006B8F57 /* CursusData.swift */,
 				27C5E8652351D3D400E32B1A /* SceneDelegate.swift */,
-				27C5E8672351D3D400E32B1A /* EventViewController.swift */,
-				62B5140523533E8800FBFD18 /* EventTableViewController.swift */,
-				62B5140223533B4900FBFD18 /* EventCell.swift */,
-				673C702A2352282E00608C2C /* Extensions.swift */,
-				2736DA3723535CE500DD91AC /* LoggedInViewController.swift */,
-				673C70292352282E00608C2C /* LoginViewController.swift */,
 				27C5E8692351D3D400E32B1A /* Main.storyboard */,
-				2736DA3923535D7B00DD91AC /* CursusTableViewController.swift */,
+				942268D2238ED352000110C4 /* Models */,
+				942268D3238ED387000110C4 /* Views */,
+				942268D5238ED3E3000110C4 /* Controllers */,
+				942268D4238ED3D4000110C4 /* Extentions */,
 				27C5E86C2351D3D800E32B1A /* Assets.xcassets */,
 				27C5E86E2351D3D800E32B1A /* LaunchScreen.storyboard */,
 				27C5E8712351D3D800E32B1A /* Info.plist */,
-				EA609DAA2352492F002F3B36 /* Services.swift */,
-				40CE7B1223536224002B9302 /* APIConnection.swift */,
 			);
 			path = "Swifty Companion";
+			sourceTree = "<group>";
+		};
+		942268D2238ED352000110C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62B5140223533B4900FBFD18 /* EventCell.swift */,
+				4044C1212352FB9800819EDE /* EventData.swift */,
+				2736DA35235350E700DD91AC /* CursusTableViewCell.swift */,
+				EAB13ECC2354D0BC006B8F57 /* CursusData.swift */,
+				EAB13ECA2354CBFC006B8F57 /* CampusData.swift */,
+				94A47F5723950D1300F55C96 /* ProjectData.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		942268D3238ED387000110C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2736DA3723535CE500DD91AC /* LoggedInViewController.swift */,
+				673C70292352282E00608C2C /* LoginViewController.swift */,
+				2736DA3923535D7B00DD91AC /* CursusTableViewController.swift */,
+				27C5E8672351D3D400E32B1A /* EventViewController.swift */,
+				62B5140523533E8800FBFD18 /* EventTableViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		942268D4238ED3D4000110C4 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				673C702A2352282E00608C2C /* Extensions.swift */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		942268D5238ED3E3000110C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40CE7B1223536224002B9302 /* APIConnection.swift */,
+				EA609DAA2352492F002F3B36 /* Services.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +214,7 @@
 				EA609DAB2352492F002F3B36 /* Services.swift in Sources */,
 				62B5140323533B4900FBFD18 /* EventCell.swift in Sources */,
 				27C5E8642351D3D400E32B1A /* AppDelegate.swift in Sources */,
+				94A47F5823950D1300F55C96 /* ProjectData.swift in Sources */,
 				62B5140623533E8800FBFD18 /* EventTableViewController.swift in Sources */,
 				27C5E8662351D3D400E32B1A /* SceneDelegate.swift in Sources */,
 			);

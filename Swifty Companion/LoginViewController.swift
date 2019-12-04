@@ -1,13 +1,6 @@
-//
-//  LoginViewController.swift
-//  rush00
-//
-//  Created by teo KELESTURA on 2019/10/12.
-//  Copyright © 2019 teo KELESTURA. All rights reserved.
-//
-
 import UIKit
 class AlertHelper {
+    
 //    ALERT_MESSAGE
     func showAlert(fromController controller: UIViewController, messages: String) {
         let alert = UIAlertController(title: "Error", message: messages, preferredStyle: .alert)
@@ -27,7 +20,6 @@ class LoginViewController: UIViewController {
 
 //    TEXT_FIELD
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwdTextField: UITextField!
 
 //    LOGIN_BUTTON
     @IBOutlet weak var loginButton: UIButton!
@@ -35,16 +27,16 @@ class LoginViewController: UIViewController {
     let conn:APIConnection = APIConnection()
     @IBAction func loginButtonPress(_ sender: Any) {
         let loadIcon = loadingIconStart()
-        if usernameTextField.text! != "" && passwdTextField.text! != "" {
+        if usernameTextField.text! != "" {
             //BEGIN LOGIN PROCESS
             loginUser(input: usernameTextField.text!)
-            sleep(2)
+            sleep(3)
             if (client.userFirstName != "") {
                 self.loadLoggedInScreen()
             }
             else {
                 let alert = AlertHelper()
-                alert.showAlert(fromController: self, messages: "Invalid Login or Password.")
+                alert.showAlert(fromController: self, messages: "No such user.")
             }
         }
         else {
@@ -78,7 +70,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameTextField.text = ""
-        passwdTextField.text = ""
 //        if UIDevice.current.orientation.isLandscape {}
     }
 

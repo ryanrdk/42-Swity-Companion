@@ -1,14 +1,7 @@
-//
-//  ViewController.swift
-//  42Events
-//
-//  Created by Samantha HILLEBRAND on 2019/10/12.
-//  Copyright © 2019 Rush00Team. All rights reserved.
-//
-
 import UIKit
 
 class AlertInfo {
+    
 //    ALERT_MESSAGE
     func showAlert(fromController controller: UIViewController, messages: String) {
         let alert = UIAlertController(title: "Info", message: messages, preferredStyle: .alert)
@@ -83,7 +76,6 @@ class EventViewController: UIViewController {
     func formatTime(date: String) -> String{
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        //format.locale = Locale(identifier: "en_US_POSIX")
         let newDate = format.date(from: date)
         format.dateFormat = "MM-dd'T'HH:mm"
         return format.string(from: newDate ?? Date())
@@ -91,7 +83,6 @@ class EventViewController: UIViewController {
     func formatDuration(dateStart: String, dateEnd: String) -> String {
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        //format.locale = Locale(identifier: "en_US_POSIX")
         let newStartDate = format.date(from: dateStart)
         let newEndDate = format.date(from: dateEnd)
         let duration = newEndDate?.timeIntervalSince(newStartDate!)

@@ -1,11 +1,3 @@
-//
-//  EventData.swift
-//  42Events
-//
-//  Created by abduraghmaan GABRIELS on 2019/10/13.
-//  Copyright © 2019 Rush00Team. All rights reserved.
-//
-
 import Foundation
 
 class EventData : NSObject{
@@ -39,6 +31,6 @@ class EventData : NSObject{
 //    }
     
     override var description: String {
-        return "\(self.id) of \(self.name)"
+        return "\(self.id ?? 1) of \(self.name)"
     }
 }

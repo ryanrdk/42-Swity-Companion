@@ -1,11 +1,3 @@
-//
-//  Services.swift
-//  42Events
-//
-//  Created by Harmun Rossouw on 2019/10/12.
-//  Copyright © 2019 Rush00Team. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -25,6 +17,8 @@ class Client {
     
     var cursuses: [CursusData] = []
     
+    var projects: [ProjectData] = []
+    
     //GET gets user info (firstName, lastName, login, photo) and returns as string
     func getUserInfo(token: String,username: String,  completion: @escaping (_ firstName: String, _ lastName: String, _ login: String, _ photo:String, _ userLevel:Double, _ cursusName:[String], _ cursusLevel:[Double]) -> ()) {
         //setup URL and headers
@@ -42,7 +36,7 @@ class Client {
                 if let response = response as? HTTPURLResponse {
                     print("statusCode: \(response.statusCode)")
                 }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                if let data = data, let _ = String(data: data, encoding: .utf8) {
                     do {
                         let jData = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                         if jData["cursus_users"] != nil {
@@ -95,7 +89,7 @@ class Client {
                 if let response = response as? HTTPURLResponse {
                     print("statusCode: \(response.statusCode)")
                 }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                if let data = data, let _ = String(data: data, encoding: .utf8) {
                     do {
                         let jData = try JSONSerialization.jsonObject(with: data, options: []) as! [NSDictionary]
                         //print(jData)
@@ -131,7 +125,7 @@ class Client {
                 if let response = response as? HTTPURLResponse {
                     print("statusCode: \(response.statusCode)")
                 }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                if let data = data, let _ = String(data: data, encoding: .utf8) {
                     do {
                         let jData = try JSONSerialization.jsonObject(with: data, options: []) as! [NSDictionary]
                         //print(jData)
@@ -167,7 +161,7 @@ class Client {
                 if let response = response as? HTTPURLResponse {
                     print("statusCode: \(response.statusCode)")
                 }
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                if let data = data, let _ = String(data: data, encoding: .utf8) {
                     do {
                         let jData = try JSONSerialization.jsonObject(with: data, options: []) as! [NSDictionary]
                         //print(jData)

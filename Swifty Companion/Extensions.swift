@@ -1,11 +1,3 @@
-//
-//  Extensions.swift
-//  rush00
-//
-//  Created by teo KELESTURA on 2019/10/12.
-//  Copyright © 2019 teo KELESTURA. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

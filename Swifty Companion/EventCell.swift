@@ -1,11 +1,3 @@
-//
-//  deathCell.swift
-//  TableView
-//
-//  Created by Ryan de Kwaadsteniet on 10/9/19.
-//  Copyright © 2019 Ryan de Kwaadsteniet. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -85,19 +77,15 @@ class EventCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func formatDate(date: String) -> String{
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        //format.locale = Locale(identifier: "en_US_POSIX")
         let newDate = format.date(from: date)
         format.dateFormat = "yyyy-MM-dd"
         return format.string(from: newDate ?? Date())

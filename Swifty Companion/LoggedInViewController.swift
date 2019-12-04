@@ -1,11 +1,3 @@
-//
-//  LoggedInViewController.swift
-//  42Events
-//
-//  Created by Samantha HILLEBRAND on 2019/10/13.
-//  Copyright © 2019 Rush00Team. All rights reserved.
-//
-
 import UIKit
 
 class LoggedInViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -23,13 +15,12 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var levelProgressBar: UIProgressView!
 
 
-
     //    EVENTS_BUTTON
     @IBOutlet weak var eventButton: UIButton!
     @IBAction func eventsButtonPress(_ sender: Any) {
         //load events
         getEvents()
-        sleep(2)
+        sleep(3)
         loadEventsScreen()
     }
 
@@ -166,7 +157,7 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
                 return
             }
 
-            print("Download Started")
+            print("Download Started\n")
             var image = UIImage(data: data!)
             //            activityView.stopAnimating()
 
@@ -180,7 +171,7 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
                     //                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
 
                 }
-                print("Download Finished")
+                print("Download Finished\n")
                 DispatchQueue.main.async(execute: set_image)
             }
         })
