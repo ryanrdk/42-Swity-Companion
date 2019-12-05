@@ -93,6 +93,24 @@ class SearchViewController: UIViewController, UISearchBarDelegate, APIDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "userProfileSegue" {
+            // This segue is trigger if user click on a result into researchTableView
+            // So we hydrate our next viewController with the selected userId, allowing the next page to retrieve UserInformations.
+            
+            let vc = segue.destination as! ProfileViewController
+            api.delegate = vc
+            
+            if sender != nil && sender is UITableViewCell {
+                let index = searchTableView.indexPathForSelectedRow!
+                vc.userId = searchTableViewDelegate.filtered[index.item].id
+            }
+            else {
+                vc.userId = searchTableViewDelegate.filtered[0].id
+            }
+        }
+    }
+    
 }
 
 class SearchTableViewDelegate: UIViewController, UITableViewDataSource, UITableViewDelegate {

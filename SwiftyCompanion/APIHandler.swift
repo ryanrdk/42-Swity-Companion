@@ -117,7 +117,7 @@ class Api {
         // Search all users with login starting with 'login'
 
         if self.token == nil {
-            self.delegate?.handleRequestError(from: "searchUserLogin", err: nil)
+            //self.delegate?.handleRequestError(from: "searchUserLogin", err: nil)
         }
         else {
             let parameters: Parameters = [
