@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController, APIDelegate {
     }
     
     private func        roundImageView(imageView: UIImageView) {
-        // Just turn rectangular imageView into circle
+        // circularize the profile image
         imageView.layer.cornerRadius = imageView.frame.size.width / 2;
         imageView.clipsToBounds = true;
     }
@@ -88,14 +88,14 @@ class ProfileViewController: UIViewController, APIDelegate {
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            let alert = UIAlertController(title: "Request Error", message: "From: \(from) Err: \(err)", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Request Error", message: "From: \(from) Err: \(err!)", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
     func                handleRequestSuccess(from: String, data: Any) {
-        // When token successfully retrieved. Try to get userProfile.
+        // get user profile when received token
         if from == "getAccessToken" {
             if userId != nil {
                 api.getUserProfile(user_id: userId!)

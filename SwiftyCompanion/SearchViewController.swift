@@ -45,7 +45,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, APIDelegate {
                 self.loadingIndicator.stopAnimating()
             }
         }
-        let alert = UIAlertController(title: "Request Error", message: "From: \(from) Err: \(String(describing: err))", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Request Error", message: "From: \(from) Err: Response bucket too large.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
