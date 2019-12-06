@@ -166,8 +166,17 @@
                                                                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-8R-47w" userLabel="Info Field Grade">
                                                                                 <rect key="frame" x="0.0" y="22" width="239" height="19.5"/>
                                                                                 <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pool:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ie-t5-PSC">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="19.5"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="0Fi-ma-vwO"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                                        <color key="textColor" red="0.0" green="0.63137254899999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1E-jV-xrn">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="239" height="19.5"/>
+                                                                                        <rect key="frame" x="63" y="0.0" width="176" height="19.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <color key="textColor" red="0.0" green="0.43137254899999999" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -300,13 +309,13 @@
                                                                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmH-Gd-emx" userLabel="Skill Field Info">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
                                                                                             <subviews>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Skill Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiR-5g-sdp">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiR-5g-sdp">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="289.5" height="24"/>
                                                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                                                                     <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-jS-ctH">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-jS-ctH">
                                                                                                     <rect key="frame" x="289.5" y="0.0" width="44.5" height="24"/>
                                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                     <color key="textColor" red="0.094117647060000004" green="0.7843137255" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -321,6 +330,7 @@
                                                                                         </progressView>
                                                                                     </subviews>
                                                                                     <constraints>
+                                                                                        <constraint firstAttribute="trailing" secondItem="fiR-5g-sdp" secondAttribute="trailing" constant="44.5" id="RAD-Xa-nUw"/>
                                                                                         <constraint firstItem="O5g-jg-2aR" firstAttribute="width" secondItem="2Y9-zk-UCR" secondAttribute="width" id="zB2-j5-vKc"/>
                                                                                     </constraints>
                                                                                 </stackView>
@@ -459,6 +469,7 @@
                         <outlet property="levelLabel" destination="OVp-eG-Euk" id="wHR-ad-ZbP"/>
                         <outlet property="loginLabel" destination="5fR-W8-hCy" id="gf2-5N-W4X"/>
                         <outlet property="pictureLoader" destination="SbW-yH-bPR" id="gRB-qv-gcD"/>
+                        <outlet property="poolLabel" destination="q1E-jV-xrn" id="cI2-WG-lUm"/>
                         <outlet property="profileImageView" destination="i9e-2t-lMh" id="oMW-YS-J44"/>
                         <outlet property="projectTableView" destination="DhZ-lQ-9Md" id="OSN-gF-Cp0"/>
                         <outlet property="skillTableView" destination="exO-jc-WE7" id="yPg-yV-gdZ"/>

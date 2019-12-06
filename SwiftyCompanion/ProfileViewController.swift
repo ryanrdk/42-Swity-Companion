@@ -16,17 +16,21 @@ class ProfileViewController: UIViewController, APIDelegate {
     var userId: Int?
     
     var userProfile: UserProfile? {
+        // set the userProfile information with the information passed
+        
         didSet {
             if userProfile != nil {
                 projectTableViewDelegate.data = userProfile!.projects
                 skillTableViewDelegate.data = userProfile!.skills
                 loginLabel?.text = userProfile?.login
+                poolLabel?.text = userProfile?.pool
                 correctionPtsLabel?.text = "\(userProfile!.correctionPts)"
                 levelLabel?.text = userProfile?.getLevelString()
                 DispatchQueue.main.async {
                     self.skillTableView?.reloadData()
                     self.projectTableView?.reloadData()
                 }
+                // as the profile picture can take longer to load, we only call for a response in this view
                 Alamofire.request(userProfile!.pictureUrl, method: .get).responseData { response in
                     if response.response?.statusCode == 200 && response.error == nil && response.data != nil {
                         DispatchQueue.main.async {
@@ -44,6 +48,7 @@ class ProfileViewController: UIViewController, APIDelegate {
 
     @IBOutlet weak var  pictureLoader: UIActivityIndicatorView!
     @IBOutlet weak var  loginLabel: UILabel!
+    @IBOutlet weak var  poolLabel: UILabel!
     @IBOutlet weak var  correctionPtsLabel: UILabel!
     @IBOutlet weak var  levelLabel: UILabel!
     @IBOutlet weak var  profileImageView: UIImageView!

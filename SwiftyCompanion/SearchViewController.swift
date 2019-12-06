@@ -32,11 +32,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, APIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         api.delegate = self
+        ///api.getAccessToken()
     }
 
     func handleRequestError(from: String, err: Error?) {
@@ -64,21 +64,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate, APIDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // Filter searched elements in cache if exist, else, perform a request to get elements.
+        // filter the current data, otherwise retrieve from API call
 
-        // If searchText contain only valid login characters
+        // validation condition for checking if the search text uses the correct characters
         if searchText.rangeOfCharacter(from: self.loginCharacterSet.inverted) == nil {
-            // If size is > 2 (to avoid too many requests) and < 10 (max len of login + 1)
+            // to avoid too many requests set the minimum value to 2 and maximum amount in a username is 10
             if searchText.count >= 2  && searchText.count < 10 {
                 let data = searchTableViewDelegate.data;
                 
-                // Filter data based on already retrieved data
+                // filter based on search text
                 searchTableViewDelegate.filtered = data.filter({ (user) -> Bool in
                     let tmp: String = user.login.lowercased()
                     return (tmp.hasPrefix(searchText.lowercased()))
                 })
                 
-                // Else retrieve data from API
+                // make an API call if the filter count is 0
                 if(searchTableViewDelegate.filtered.count == 0){
                     searchActive = false;
                     self.loadingIndicator.startAnimating()
@@ -95,8 +95,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, APIDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "userProfileSegue" {
-            // This segue is trigger if user click on a result into researchTableView
-            // So we hydrate our next viewController with the selected userId, allowing the next page to retrieve UserInformations.
+            // on click on one of the cells (usernames), we will perform a segue
+            // we will hydrate our next view with the corresponding user profile data
             
             let vc = segue.destination as! ProfileViewController
             api.delegate = vc
